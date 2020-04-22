@@ -40,7 +40,7 @@ python-mimeparse==1.6.0
 python-subunit==1.2.0
 python-twitter==2.2
 pytz==2015.6
-PyYAML==3.11
+PyYAML==5.1
 redis==2.10.5
 requests==2.7.0
 requests-oauthlib==0.5.0
