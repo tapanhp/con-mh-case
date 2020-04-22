@@ -1,0 +1,377 @@
+    #msgs {
+        left: 0px;
+        top: -60px;
+        position: relative;
+        font-family: "Open Sans";
+        font-weight: normal;
+        font-style: normal;
+    }
+    #header_row {
+        position : relative;
+        width : 1320px;
+        height : 100px;
+        padding : 10px;
+    }
+    #header_bar {
+        width : 100%;
+        background-color : #FFFFFF;
+        opacity : 0.9;
+    }
+    #map_logo {
+        position : absolute;
+        top : 9px;
+        left : 10px;
+        width : 70%;        
+        float : left;
+    }
+    .header_links {
+        font-family: "Open Sans";
+        font-weight: 300;
+        font-size: 22px;
+        color : #58585B;
+        padding : 5px 0px 0px 54px;
+        white-space : pre;
+        float : right;
+        text-decoration: none;
+    }
+    
+    #content {
+        position : relative;
+        width : 100%;        
+    }
+    
+    #ohmconnect_logo {
+        border : none;
+        position : relative;
+        width : 30%;
+        float : left;
+    }
+    #input_div {
+        position: relative;
+        top: 0px;  
+        left: 450px;        
+        width : 259px;
+        height : 106px;
+        border-radius : 10px;
+        background-color : #E6E7E8;  
+        padding : 0px;
+        margin : 0px;        
+    }
+    #input_div_text {
+        position: relative;        
+        top: 10px;  
+        font-family: "Open Sans";
+        font-weight: 700;
+        color : #6D6E70;  
+        font-size: 24px;
+    }
+    #input_div_buttons {
+        position: relative;
+        top: 20px;  
+        margin : 0px;
+        padding : 0px;
+        border : 0px;
+    }
+    .input_buttons {
+        opacity : 1;
+        top : 100px;
+        margin : 0px;
+        padding : 0px;
+        border : 0px;
+    }
+    .input_buttons:hover {
+        opacity : 0.8;
+    }
+    
+    #box1 {
+        width:100px;
+        height:100px;
+        border:4px solid black;
+    }
+    
+    #logged_frm {
+        width : 60%;
+        float : right;
+        position: relative;
+        right : 70px;
+        font-family: "Open Sans";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+    }
+    #login_name {
+        float : right;
+        height : 70px;
+        border-radius : 10px;
+        text-align : right;
+        background-color : #E6E7E8;  
+    }
+    #login_dropdown {
+        float : right;     
+        padding : 20px 17px 20px 30px;   
+    }
+    #logout_dropdown {
+        float : right;  
+        text-decoration: none;
+        padding : 20px 17px 20px 30px;     
+    }
+    #login_points {
+        float : left; 
+        position : relative;
+        top : 14px;
+        left : 10px;
+        padding : 9px 25px;
+        border-radius : 10px;
+        text-align : center;
+        background-color : #FFFFFF;  
+        height : 42px;
+    }
+    #login_points:hover {
+        cursor : pointer;
+    }
+    #login_register {
+        float : left;
+        position : relative;
+        top : 14px;
+        left : 15px;
+        height : 42px;
+        width : 142px;
+        display : none;
+        opacity : 0.8;
+    }
+    #login_register:hover {
+        opacity : 1;
+    }
+    
+    #header_login_name {
+        float : right;
+        height : 50px;        
+        border-radius : 10px;
+        text-align : right;
+    }
+    #header_points {
+        float : left; 
+        position : relative;
+        top : 14px;
+        text-align : left;
+        cursor : pointer;
+    }
+    #header_login_register {
+        float : left;
+        position : relative;
+        top : 4px;
+        height : 42px;
+        width : 142px;
+        display : none;
+        opacity : 0.8;
+    }
+    #header_login_register:hover {
+        opacity : 1;
+    }
+    #header_login_dropdown {
+        float : right;     
+        padding : 14px 0px;   
+    }
+    #header_logout_dropdown {
+        float : right;     
+        text-decoration: none;
+        padding : 14px 0px;
+    }
+    .nav_buttons {
+        opacity : 1;
+    }
+    .nav_buttons:hover {
+        opacity : 0.8;
+    }
+    #maincontent_div {
+        overflow : hidden;
+        width : 900px;
+        height : 570px;
+        background-color : #E6E7E8;
+        border-radius : 10px;
+        right : 150px;
+        top : -605px;
+        position : relative;
+        font-family: "Open Sans";
+        font-weight: normal;
+        font-style: normal;
+        color: #6D6E70;
+        font-size: 24px;
+        padding : 5px;
+    }
+    #maincontent_text {
+        line-height : 30px;
+        text-align : left;
+        height : 85px;
+        padding-left : 20px;
+        padding-top : 10px;        
+    }
+    #nav_div {
+        position: relative;
+        top: 20px;  
+        left: 450px;       
+        border-radius : 10px;
+        background-color : #E6E7E8;
+        width: 259px;
+        height : 500px;  
+        padding : 5px;
+    }
+    #appliance_id {
+        font-family: "Open Sans";
+        font-weight: 700;
+        color: #6D6E70;
+        font-size: 24px;
+        padding : 8px;            
+    }        
+    
+    body {
+      background: white;
+      color: #404041;
+      padding: 0;
+      font-family: Open Sans, Helvetica, Verdana, Sans-Serif;
+      font-weight: normal;
+      font-style: normal;
+      color: #404041;
+      font-size: 24px;
+      line-height: 1;
+      cursor: default; 
+    }
+    
+    meta.foundation-mq-small {
+  font-family: "only screen and (min-width: 768px)";
+  width: 768px; }
+
+meta.foundation-mq-medium {
+  font-family: "only screen and (min-width:1280px)";
+  width: 1280px; }
+
+meta.foundation-mq-large {
+  font-family: "only screen and (min-width:1440px)";
+  width: 1440px; }
+  
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ 
+html {
+height : 100%;
+}
+  
+html,
+body {
+  font-size: 100%; }
+
+a:hover {
+  cursor: pointer; }
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto; }
+
+object,
+embed {
+  height: 100%; }
+img {
+  -ms-interpolation-mode: bicubic; }
+#map img{max-width: inherit;}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+ 
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.hide {
+  display: none; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+select {
+  width: 100%; }
+
+.view {
+    width: 70px;
+    height: 80px;
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgb(230, 230, 230);
+    cursor: default;
+}
+  
+.view-fifth input {
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.view-fifth .mask {
+   background-color: rgba(146,96,91,0.3);
+   -webkit-transform: translateX(-300px);
+   -moz-transform: translateX(-300px);
+   -o-transform: translateX(-300px);
+   -ms-transform: translateX(-300px);
+   transform: translateX(-300px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   opacity: 1;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.view-fifth:hover .mask {
+   -webkit-transform: translateX(0px);
+   -moz-transform: translateX(0px);
+   -o-transform: translateX(0px);
+   -ms-transform: translateX(0px);
+   transform: translateX(0px);
+}
+.view-fifth:hover input {
+   -webkit-transform: translateX(300px);
+   -moz-transform: translateX(300px);
+   -o-transform: translateX(300px);
+   -ms-transform: translateX(300px);
+   transform: translateX(300px);
+}
+img {
+  border-width: 0;
+}

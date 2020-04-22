@@ -1,0 +1,21 @@
+{
+  "name": "jquery-image-uploader",
+  "version": "0.3.3",
+  "main": "src/jqueryUploader.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/jdeniau/jquery-image-uploader",
+  "_release": "0.3.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.3",
+    "commit": "fb3102c16211cf65259d44969b965b0189cd073d"
+  },
+  "_source": "git://github.com/jdeniau/jquery-image-uploader.git",
+  "_target": "~0.3.3",
+  "_originalSource": "jquery-image-uploader",
+  "_direct": true
+}

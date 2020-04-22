@@ -1,0 +1,95 @@
+{% extends "base_map.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/css/webflow_base.css">
+
+    <style>
+        html, body {
+            background-color: #f1f1f2;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        body, p, h1, h2, h3, h4, h5, h6 {
+            font-family: "Open Sans", sans-serif;
+            color: #808284;
+        }
+
+        .container {
+            font-family: "Open Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: #808284;
+            padding-top: 50px;
+            background: #f1f1f2;
+            padding-bottom: 50px;
+        }
+
+        #dashboard-top-spacer {
+            height: 25px;
+        }
+
+        #referrals .leaderboard_points {
+            margin-top: 5px;
+        }
+
+        .well { height: 380px; overflow: hidden; }
+
+        .dashboard-tip-spot {
+            position: absolute;
+            z-index: 50;
+            bottom: 30px;
+            right: 20px;
+            height: 26px;
+            width: 26px;
+            margin-top: 0px;
+            padding-top: 3px;
+            border-radius: 13px;
+            text-align: center;
+            background-color: #E6E7E8;
+            color: #A7A9AB;
+        }
+
+        @media (max-width: 768px) {
+          .dashboard-tip-spot { bottom: 10px; }
+        }
+
+        .dashboard-tip-spot-content {
+            display: none;
+        }
+
+        .warning-button {
+            display: block;
+            margin-top: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px solid #47bccc;
+            border-radius: 5px;
+            background-color: #47c1d2;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="container" class="container">
+        <div id="dashboard-top-spacer">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="twothirds_div">
+                    <h1>Ready to begin assessment</h1>
+                    Read the README.md file for further instructions.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

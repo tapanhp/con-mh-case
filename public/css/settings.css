@@ -1,0 +1,196 @@
+#container {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    max-width: 600px;
+}
+
+.settings-text {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 18px;
+    color: #6D6E70;
+}
+
+.settings-header {
+    width: 100%;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #6D6E70;
+    clear: both;
+}
+
+.settings-subhead {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.settings-label {
+    font-size: 18px;
+    padding-bottom: 3px;
+}
+
+.settings-field {
+    padding-bottom: 10px;
+}
+
+.section {
+    padding-left: 26px;
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.section-left {
+    width: 200px;
+    float: left;
+}
+
+.section-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#change-profile-text { margin-bottom: 20px; }
+
+.settings-row {
+    padding-bottom: 10px;
+}
+
+.notification-label {
+    float: right;
+    padding-bottom: 10px;
+}
+
+.notification-checkbox {
+    width: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#upload-image-div {
+    padding-top: 0;
+    cursor: pointer;
+}
+
+#save-cancel-div {
+    width: 100%;
+    float: right;
+    text-align: right;
+}
+
+.save-cancel-bottom {
+    padding-top: 5px;
+}
+
+#container .submit-button {
+    padding: 10px 30px;
+    border-radius: 7px;
+
+}
+
+#cancel-div {
+    padding: 5px 5px 12px 0;
+}
+
+#cancel-link,
+#cancel-link a:visited,
+#cancel-link a:focus,
+#cancel-link a:hover {
+    font-size: 14px;
+    color: #bbbdc0;
+    text-decoration: none;
+}
+
+#change-password-div {
+    padding-bottom: 20px;
+}
+
+#change-password-button {
+    cursor: pointer;
+    height: 35px;
+}
+
+#change-photo-div {
+    width: 100px;
+}
+
+#change-photo-text {
+    padding-top: 7px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#phone-change-button {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: white;
+    background: #d1d2d4;
+    cursor: pointer;
+}
+
+#feedback {
+    width: 100%;
+    height: 75px;
+    padding: 0;
+}
+
+#slider-div {
+
+    width: 48%;
+    float: left;
+}
+
+.slider-bar {
+}
+
+#slider-div .ui-slider-horizontal {
+    height: 3px;
+    background: #d1d2d4;
+    border: 0;
+    border-radius: 3px;
+}
+
+#slider-div .ui-slider-range {
+    top: -2px;
+    height: 6px;
+    background: #47c1d2;
+    border: 0;
+    border-radius: 3px;
+}
+
+#slider-div .ui-slider-handle {
+    border: none;
+    background: url(/images/settings_scrubber_handle.png);
+    width: 32px;
+    height: 32px;
+    top: -14px;
+    margin-left: -14px;
+}
+
+.slider-title {
+}
+
+#container .slider-label {
+    text-align: left;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -5px;
+}
+
+#email {
+    width: 50%;
+}

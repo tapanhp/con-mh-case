@@ -1,0 +1,53 @@
+js_base_map:
+  filters: rjsmin
+  output: gen/base_map_%(version)s.js
+  contents:
+    - bower_components/jquery/dist/jquery.js
+    - js/d3.v3.min.js
+    - js/d3.tip.min.js
+    - js/jquery-ui.js
+    - js/jquery.ui.touch-punch.min.js
+    - bower_components/jquery-image-uploader/src/jquery.uploader.js
+    - bower_components/bootstrap-material-design/dist/js/ripples.js
+    - bower_components/bootstrap-material-design/dist/js/ohm_material.js
+    - bower_components/bootstrap/dist/js/bootstrap.js
+    - bower_components/bootstrap-progressbar/bootstrap-progressbar.js
+    - bower_components/snackbarjs/dist/snackbar.min.js
+    - bower_components/autogrow-textarea/jquery.autogrowtextarea.min.js
+    - bower_components/list.js/dist/list.js
+    - bower_components/clipboard/dist/clipboard.min.js
+    - js/ohm_connect.js
+
+css_base_map:
+  filters: cssmin
+  output: gen/base_map_%(version)s.css
+  contents:
+    - css/jquery-ui.css
+    - css/jquery-ui.theme.css
+    - css/fonts_open_sans.css
+    - css/ohm-bootstrap.css
+    - bower_components/bootstrap-material-design/dist/css/ripples.min.css
+    - css/ohm-material-wfont.css
+    - bower_components/snackbarjs/dist/snackbar.min.css
+    - bower_components/snackbarjs/themes-css/material.css
+    - css/ohmconnect_map.css
+    - css/dialog.css
+
+js_cookies:
+  output: gen/cookies.min.js
+  contents:
+    - bower_components/Cookies/dist/cookies.min.js
+
+css_fast_ohmhour:
+  filters: cssmin
+  output: gen/fast_ohm_hour_%(version)s.css
+  contents:
+    - css/fast-ohm-hour.css
+    - bower_components/snackbarjs/dist/snackbar.min.css
+
+js_fast_ohmhour:
+  filters: rjsmin
+  output: gen/fast_ohm_hour_%(version)s.js
+  contents:
+    - bower_components/snackbarjs/dist/snackbar.min.js
+    - bower_components/Cookies/dist/cookies.min.js

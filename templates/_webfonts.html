@@ -1,0 +1,16 @@
+{% if environment.equals('production') %}
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+{% else %}
+    <script src="/js/webfont.js"></script>
+{% endif %}
+
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
+
+<script>
+    WebFont.load({
+        google: {
+            families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+        }
+    });
+</script>

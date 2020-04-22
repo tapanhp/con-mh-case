@@ -1,0 +1,283 @@
+    @font-face {
+      font-family: 'Signika';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Signika'), local('Signika-Regular'), url(http://themes.googleusercontent.com/static/fonts/signika/v3/_M5k9_BZTkfaM2dnN0vNGw.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');
+    }
+    #msgs { 
+        left: 950px;
+        top: 40px;
+        position: absolute;
+        font-family: "Signika";
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    #ohmconnect_logo {
+        left: 100px;
+        top: 20px;
+        position: absolute;
+    }
+    #input_div {
+        position: absolute;
+        top: 100px;  
+        right: 100px;        
+        width : 259px;
+        height : 106px;
+        border-radius : 10px;
+        background-color : #E6E7E8;  
+        padding : 0px;
+        margin : 0px;        
+    }
+    #input_div_text {
+        position: relative;        
+        top: 10px;  
+        font-family: "Open Sans";
+        font-style: bold;
+        font-weight: bold; 
+        color : #6D6E70;  
+        font-size: 24px;
+    }
+    #input_div_buttons {
+        position: relative;
+        top: 20px;  
+        margin : 0px;
+        padding : 0px;
+        border : 0px;
+    }
+    .input_buttons {
+        opacity : 1;
+        top : 100px;
+        margin : 0px;
+        padding : 0px;
+        border : 0px;
+    }
+    .input_buttons:hover {
+        opacity : 0.8;
+    }
+    
+    #box1 {
+        width:100px;
+        height:100px;
+        border:4px solid black;
+    }
+    
+    #logged_frm {
+        right: 100px;
+        top: 40px;
+        position: absolute;
+        font-family: "Signika";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        margin-bottom: 0px;
+        width : 250px;
+        float : right;
+        text-align : right;
+    }
+    #logged_frm:hover { 
+        cursor : hand;
+        cursor : pointer;        
+    }
+    
+    .nav_buttons {
+        opacity : 1;
+    }
+    .nav_buttons:hover {
+        opacity : 0.8;
+    }
+    #maincontent_div {
+        width : 850px;
+        height : 570px;
+        background-color : #E6E7E8;
+        border-radius : 10px;
+        left : 100px;
+        top : 100px;
+        position : absolute;
+        font-family: "Open Sans";
+        font-weight: normal;
+        font-style: normal;
+        color: #6D6E70;
+        font-size: 24px;
+        padding-left : 30px;
+        padding-top : 18px;
+    }
+    #maincontent_graph {
+        width : 850px;
+        height : 570px;
+        left : 100px;
+        top : 100px;
+        position : absolute;        
+    }
+    #maincontent_text {
+        line-height : 30px;
+    }
+    #nav_div {
+        position: absolute;
+        top: 220px;  
+        right: 100px;       
+        border-radius : 10px;
+        background-color : #E6E7E8;
+        width: 259px;
+        height : 500px;          
+        padding : 5px;                        
+    }
+    #appliance_id {
+        font-family: "Open Sans";
+        font-weight: bold;
+        font-style: bold;
+        color: #6D6E70;
+        font-size: 24px;
+        padding : 8px;            
+    }        
+    
+    body {
+      background: white;
+      color: #404041;
+      padding: 0;
+      font-family: Signika, Helvetica, Verdana, Sans-Serif;
+      font-weight: normal;
+      font-style: normal;
+      color: #404041;
+      font-size: 24px;
+      line-height: 1;
+      cursor: default; 
+    }
+    
+    meta.foundation-mq-small {
+  font-family: "only screen and (min-width: 768px)";
+  width: 768px; }
+
+meta.foundation-mq-medium {
+  font-family: "only screen and (min-width:1280px)";
+  width: 1280px; }
+
+meta.foundation-mq-large {
+  font-family: "only screen and (min-width:1440px)";
+  width: 1440px; }
+  
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+
+html,
+body {
+  font-size: 100%; }
+
+a:hover {
+  cursor: pointer; }
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto; }
+
+object,
+embed {
+  height: 100%; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.hide {
+  display: none; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+select {
+  width: 100%; }
+
+.view {
+    width: 70px;
+    height: 80px;
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgb(230, 230, 230);
+    cursor: default;
+}
+  
+.view-fifth input {
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.view-fifth .mask {
+   background-color: rgba(146,96,91,0.3);
+   -webkit-transform: translateX(-300px);
+   -moz-transform: translateX(-300px);
+   -o-transform: translateX(-300px);
+   -ms-transform: translateX(-300px);
+   transform: translateX(-300px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   opacity: 1;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.view-fifth:hover .mask {
+   -webkit-transform: translateX(0px);
+   -moz-transform: translateX(0px);
+   -o-transform: translateX(0px);
+   -ms-transform: translateX(0px);
+   transform: translateX(0px);
+}
+.view-fifth:hover input {
+   -webkit-transform: translateX(300px);
+   -moz-transform: translateX(300px);
+   -o-transform: translateX(300px);
+   -ms-transform: translateX(300px);
+   transform: translateX(300px);
+}

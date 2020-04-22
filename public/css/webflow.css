@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+input[type=radio], input[type=checkbox] {
+    margin-left: -20px;
+}
+
+.btn {
+    white-space: normal;
+}
+
+.team_image_placeholder { cursor: pointer; }

@@ -1,0 +1,162 @@
+<script>
+    function adornMaterialInput() {
+        $('a.button').add('[data-ohm-type="button"]').each(function () {
+            if (typeof $(this).attr('data-jso-no-material') == 'undefined') {
+                if (!$(this).hasClass('btn')) {
+                    $(this).addClass('btn withripple');
+                }
+            }
+        });
+
+        $('input').add('textarea').each(function () {
+            if (typeof $(this).attr('data-jso-no-material') == 'undefined') {
+                {# MD Feb-2015 Some buttons in Webflow are actually input elements #}
+                if ($(this).attr('type') == 'submit') {
+                    if (!$(this).hasClass('btn')) {
+                        $(this).addClass('btn withripple');
+                    }
+                } else if ($(this).attr('type') == 'checkbox') {
+                    if ($(this).attr('data-ohm-type') == 'checkbox') {
+                        var materialClass = 'checkbox'
+                    } else {
+                        var materialClass = 'togglebutton'
+                    }
+                    {# MD Aug-2015 On entry there will be:
+                        <input/><label>email</label>
+                     We need to transform to this while preserving all attributes:
+                        <div class="checkbox><label><input/>email</label></div>
+                    #}
+                    $checkbox = $(this);
+                    var $label = $checkbox.parent().find('label');
+                    $label.remove();
+                    var labelText = $label.html();
+                    $label.html('');
+                    $checkbox.wrap($label);
+                    $checkbox.parent().parent().find('label').append(labelText);
+                    $checkbox.parent().wrap('<div class="' + materialClass + '"></div>');
+                } else {
+                    var attr = $(this).attr('type');
+                    if (attr == 'text' || attr == 'password' || $(this).is("textarea")) {
+                        if (!$(this).hasClass('form-control')) {
+                            $(this).addClass('form-control floating-label');
+                            $(this).wrap('<div class="form-group has-ohm"></div>');
+                        }
+                    }
+                }
+            }
+
+        });
+
+        $('select').each(function () {
+            if (typeof $(this).attr('data-jso-no-material') == 'undefined') {
+                if (!$(this).hasClass('form-control')) {
+                    $(this).addClass('form-control');
+                }
+                if (!$(this).parent().hasClass('form-group')) {
+                    $(this).wrap('<div class="form-group has-ohm"></div>');
+                }
+            }
+        });
+    }
+
+    function setupFormData(form, $widget) {
+        if (typeof form != 'object' || form.length == 0) return;
+
+        if (typeof $widget != 'undefined') {
+            $form = $widget.find('form');
+        } else {
+            $form = $('form')
+        }
+        if ($form.length == 0) return;
+
+        $.each(form, function (index, field) {
+            $field = $form.find("[name=" + field.name + "]");
+
+            if ($field.length != 0) {
+                if (typeof field.data != 'undefined') {
+                    if (field.type == "BooleanField") {
+                        if (field.data) {
+                            $field.prop("checked", true);
+                        }
+                    } else if (field.type == "SelectField") {
+                        $field.find('option').remove();
+                        if (field.description != 'autoselect') {
+                            $field.append('<option value="">Select one...</option>');
+                        }
+                        $.each(field.choices, function (index, choice) {
+                            var selected = '';
+                            if (field.data == choice[0]) selected = " selected";
+                            $field.append('<option value="' + choice[0] + '"' + selected + '>' + choice[1] + '</option>')
+                        })
+                    } else {
+                        $field
+                            .val(field.data)
+                            .attr('value', field.data)  {# OL-5197 : Set the 'value' attr so that it gets included in $el.html() call. #}
+                    }
+
+                    if (field.description == 'disabled') $field.attr("disabled", "disabled");
+                    if (field.description == 'readonly') $field.attr("readonly", "readonly");
+                    if (field.description == 'hidden') $field.parent().hide();
+
+                    $.each(field.errors, function (index, error) {
+                        var current_text = $field.attr('placeholder');
+
+                        if ((field.type == "StringField" || field.type == 'PasswordField' || field.type == 'IntegerField')
+                                && typeof current_text != 'undefined' && typeof $.material != 'undefined') {
+                            if (current_text.substring(0, 5) != '<span') current_text = '';
+                            $field.attr('placeholder', current_text + "<span class=placeholder-error>" + error + "</span> ");
+                        } else {
+                            $field.parent().append("<div class=errors>" + error + "</div>");
+                        }
+
+                    })
+                }
+            } else if (field.type == "HiddenField" || field.type == 'CSRFTokenField') {
+                $form.append('<input name="' + field.name + '" type="hidden" value="' + field.data + '">');
+            }
+        });
+
+        $form.append('<input name="signup_source" type="hidden" value="{{ signup_source }}">');
+    }
+
+    function setupForm(form, $widget) {
+        adornMaterialInput();
+        setupFormData(form, $widget);
+        if (typeof $.material == 'undefined') {
+            console.log('OhmConnect note: Two jquery files have been included, probably from WebFlow. Please fix.')
+        } else {
+            $.material.init();
+        }
+    }
+
+    function logABTests(){
+        var test_selected = 'data-ohm-abtest-selected'
+        $('[' + test_selected + ']').each(function(){
+            var selected_option = $(this).attr(test_selected)
+            PageViewTracker.log_user_action(window.location.pathname + "-" + selected_option)
+        })
+    }
+
+    $(document).ready(function(){
+
+        {% if form and not suppress_webflow_form %}
+            setupForm({{ form | tojson | safe }});
+        {% else %}
+            setupForm();
+        {% endif %}
+
+        {# MD Jun-2015 This is needed so the Webflow.js won't complain about improperly configured forms #}
+        $('html').attr("data-wf-site", "54bee4118cff7d8e60e72fbe")
+
+        logABTests()
+    })
+
+</script>
+
+{% if webflow_js %}
+  <script type="text/javascript" src="{{ base_url }}/js/{{ webflow_js }}"></script>
+{% endif %}
+
+{% if webflow_inline_js %}
+    <script type="text/javascript">{{ webflow_inline_js|safe}}</script>
+{% endif %}

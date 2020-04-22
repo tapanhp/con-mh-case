@@ -1,0 +1,36 @@
+.modal-body {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 22px;
+    color: #909192;
+}
+
+.modal-body label {
+    font-weight: 300;
+}
+
+.modal-header {
+    border: none
+}
+
+.modal-footer {
+    border: none
+}
+
+.modal-backdrop.in {
+    opacity: 0.3;
+}
+
+.dialog-section {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.dialog-section .settings-label {
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+.dialog-section .settings-field {
+    padding-right: 25px;
+}

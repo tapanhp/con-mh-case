@@ -1,0 +1,211 @@
+<style>
+    .header-bar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        font-family: "Open Sans", open-sans, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        color: #A7A9AB;
+        background-color: #FFFFFF;
+        opacity: 0.9;
+        box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.4);
+        z-index: 600; /* MD Jan-2015 This is needed so drop-down menus appear in front of other elements */
+    }
+
+    #header-tier .tier-ball {
+        width: 30px;
+        height: 30px;
+        float: right;
+        margin: -3px 5px 0 5px;
+    }
+
+    .header-logo {
+        float: left;
+        min-width: 180px;
+        padding-left: 20px;
+        padding-right: 5%;
+        padding-top: 6px;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .header-icon {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 12px;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .header-icon img {
+        width: 30px;
+    }
+
+    .header-logo:hover {
+        opacity: 1.0;
+    }
+
+    #header-link-block {
+        display: table;
+        float: left;
+        width: 30%;
+    }
+
+    .header-links,
+    .header-links a {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 19px;
+        text-align: center;
+        margin-left: 5px;
+        text-decoration: none;
+        color: #A7A9AB;
+        background-color: #FFFFFF;
+    }
+
+    .header-links a {
+        padding-top: 18px;
+        padding-bottom: 12px;
+        border-bottom: 3px transparent;
+    }
+
+    .header-links:hover,
+    .header-links:hover a {
+        color: #46c1d2;
+        cursor: pointer;
+    }
+
+    .header-links.selected a {
+        color: #46c1d2;
+        border-bottom: 3px solid #46c1d2;
+    }
+
+    .header-link-item {
+        display: table-cell;
+        vertical-align: middle;
+        height: 50px;
+        position: relative;
+    }
+
+    .header-right-item {
+        float: right;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    #header-points, #header-tier {
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 0;
+        font-weight: 700;
+        color: #46c1d2;
+        opacity: 0.7;
+    }
+
+    #header-points:hover, #header-tier:hover { opacity: 1.0; }
+    #header-points a, #header-tier a { color: #46c1d2; }
+
+    #header-points-value, #header-tier-value {
+        display: inline-block;
+        padding-top: 4px;
+    }
+
+    #header-points-label {
+        display: inline-block;
+        padding-left: 5px;
+        padding-top: 8px;
+        margin-right: 10px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #46c1d2;
+    }
+
+    #header-name {
+        float: left;
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+
+    #header-dropdown {
+        padding-top: 5px;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    #header-dropdown:hover {
+        opacity: 1.0;
+    }
+
+    #header-dropdown-menu {
+        margin-right: 20px;
+        opacity: 1;
+    }
+
+    #header-dropdown-icon-block {
+        float: left;
+        padding-top: 8px;
+    }
+
+    #header-dropdown-icon {
+        padding-bottom: 5px;
+    }
+
+    #header-dropdown-icon:hover {
+        opacity: 1;
+    }
+
+</style>
+
+<div id="header_bar" class="header-bar">
+    <div class="header-logo js-header-logo header-link-item dropdown-toggle" data-toggle="dropdown">
+        <a href="/dashboard"> <img src="/images/{{ oem }}//menu_logo.png" alt="ohmconnect" Title="Ohmconnect Home"> </a>
+    </div>
+
+    {% include "%s/_header_links.html" % oem %}
+
+    <div id="header-dropdown-block">
+        <div id="header-dropdown" class="header-right-item dropdown-toggle" data-toggle="dropdown">
+            <div id="header-name" class="display_short_name js-short-name">
+                {{ current_user.short_name() }}
+            </div>
+            <div id="header-dropdown-icon-block">
+                <img id="header-dropdown-icon" src="/images/dropdown_triangle.png"/>
+            </div>
+        </div>
+
+        <ul id="header-dropdown-menu" class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-menu-item dropdown-menu-underline">
+                <a href="/dashboard">
+                    <div class="dropdown-menu-icon">
+                        <img src="/images/{{ oem }}/navigation_bar_settings_active.png">
+                    </div>
+                    <div class="dropdown-menu-text">
+                        Dashboard
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+       <div id="header-tier" class="header-right-item">
+           <span class="header-status-level-1">Status</span><span class="header-status-level-2"> Level: </span><span class="tier-ball {{ current_user.get_tier().lower() }}"></span>
+    </div>
+
+</div>
+
+<script>
+    function setLinkUsed(div_id) {
+        $('.header-links').removeClass('selected');
+        $(div_id).addClass('selected');
+    }
+
+    var current_screen = null;
+    setLinkUsed(".js-header-points");
+
+</script>

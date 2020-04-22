@@ -1,0 +1,855 @@
+/* Standard colors
+
+Green: 83caa2
+Red: e0752d
+Blue: 47c1d2
+Grey: 808284
+Highlight grey: e6e7e8
+
+*/
+
+.color-primary { color: #47c1d2; }
+.color-plain { color: #808284; }
+
+#msgs {
+    left: 0px;
+    top: -60px;
+    position: relative;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content {
+    position: absolute;
+    top: 75px;
+    width: 1300px;
+    height: 650px;
+    overflow: hidden;
+}
+
+#ohmconnect_logo {
+    border: none;
+    position: relative;
+    width: 30%;
+    float: left;
+}
+
+#input_div {
+    position: relative;
+    top: 0px;
+    left: 450px;
+    width: 259px;
+    height: 106px;
+    border-radius: 10px;
+    background-color: #E6E7E8;
+    padding: 0px;
+    margin: 0px;
+}
+
+#input_div_text {
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+    color: #6D6E70;
+    font-size: 24px;
+}
+
+#input_div_buttons {
+    position: relative;
+    top: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.input_buttons {
+    opacity: 1;
+    top: 100px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.input_buttons:hover {
+    opacity: 0.8;
+}
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    border: 4px solid black;
+}
+
+#logout_button {
+    cursor: pointer;
+}
+
+#login_points {
+    float: left;
+    position: relative;
+    top: 14px;
+    left: 10px;
+    padding: 9px 25px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 42px;
+}
+
+#login_points:hover {
+    cursor: hand;
+    cursor: pointer;
+}
+
+#login_register {
+    float: left;
+    position: relative;
+    top: 14px;
+    left: 15px;
+    height: 42px;
+    width: 142px;
+    display: none;
+    opacity: 0.8;
+}
+
+#login_register:hover {
+    opacity: 1;
+}
+
+.nav_buttons {
+    opacity: 1;
+}
+
+.nav_buttons:hover {
+    opacity: 0.8;
+}
+
+#maincontent_div {
+    overflow: hidden;
+    width: 900px;
+    height: 570px;
+    background-color: #E6E7E8;
+    border-radius: 10px;
+    right: 150px;
+    top: -605px;
+    position: relative;
+    font-weight: normal;
+    font-style: normal;
+    color: #6D6E70;
+    font-size: 24px;
+    padding: 5px;
+}
+
+#maincontent_text {
+    line-height: 30px;
+    text-align: left;
+    height: 85px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#nav_div {
+    position: relative;
+    top: 20px;
+    left: 450px;
+    border-radius: 10px;
+    background-color: #E6E7E8;
+    width: 259px;
+    height: 500px;
+    padding: 5px;
+}
+
+#appliance_id {
+    font-weight: bold;
+    color: #6D6E70;
+    font-size: 24px;
+    padding: 8px;
+}
+
+body {
+    background: white;
+    color: #404041;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    cursor: default;
+}
+
+html {
+    height: 100%;
+}
+
+html,
+body {
+    font-size: 100%;
+}
+
+body a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img,
+object,
+embed {
+    max-width: 100%;
+    height: auto;
+}
+
+object,
+embed {
+    height: 100%;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+#map img {
+    max-width: inherit;
+}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+    max-width: none !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.hide {
+    display: none;
+}
+
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+textarea {
+    height: auto;
+    min-height: 50px;
+}
+
+select {
+    width: 100%;
+}
+
+.view {
+    width: 70px;
+    height: 80px;
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgb(230, 230, 230);
+    cursor: default;
+}
+
+.view-fifth input {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-fifth .mask {
+    background-color: rgba(146, 96, 91, 0.3);
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    transform: translateX(-300px);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-fifth:hover .mask {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.view-fifth:hover input {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -o-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px);
+}
+
+img {
+    border-width: 0;
+}
+
+.ohm-top-padding {
+    padding-top: 75px;
+}
+
+/* MD Nov-2014 Add our light-blue color to the bootstrap-material-design */
+.form-group.has-ohm .material-input:before,
+.form-group.has-ohm input.form-control:focus ~ .material-input:after,
+.form-group.has-ohm input.form-control.focus ~ .material-input:after,
+.form-group.has-ohm .material-textarea:before,
+.form-group.has-ohm textarea.form-control:focus ~ .material-textarea:after,
+.form-group.has-ohm textarea.form-control.focus ~ .material-textarea:after{
+    background: #46c1d2;
+}
+
+.form-group.has-ohm .control-label,
+.form-group.has-ohm input.form-control:not(.empty) ~ .floating-label,
+.form-group.has-ohm textarea.form-control:not(.empty) ~ .floating-label{
+    color: #46c1d2;
+}
+
+.togglebutton label input[type=checkbox]:first-child:checked + .toggle {
+    background-color: #a5ccce;
+}
+
+.togglebutton label input[type=checkbox]:first-child:checked + .toggle:after {
+    background-color: #45c1d2;
+}
+
+/* end light blue input */
+
+/* MD Nov-2014 Add more spacing between fields */
+.form-group.has-ohm {
+    padding-bottom: 0;
+}
+
+/* MD Nov-2014 Give the modal dialogs bigger borders, but bring near top since our dialogs don't have titles*/
+.modal-content .modal-body {
+    padding: 30px;
+    padding-top: 0px;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.modal-content .modal-header {
+    padding: 30px 30px 0;
+}
+
+/* MD Nov-2014 Bigger font for input text and floating label */
+.input-lg, .form-group-lg .form-control {
+    font-size: 22px;
+    margin-top: 20px;
+    height: 28px;
+}
+
+.form-control-wrapper .form-control:not(.empty) ~ .floating-label {
+    font-size: 14px;
+}
+
+.form-control-wrapper .floating-label {
+    font-size: 14px;
+}
+
+.form-control-wrapper .form-control:not(.empty) ~ .floating-label {
+    top: -14px;
+}
+
+/* end bigger font */
+
+/* MD Nov-2014 Style the material buttons */
+.button.btn {
+    white-space: normal;
+}
+
+.btn:not(.btn-link):not(.btn-flat) {
+    white-space: normal;
+}
+
+.btn-default:not(.btn-link):not(.btn-flat) {
+    color: white;
+    background: #d1d2d4;
+    text-transform: none;
+    padding: 8px 16px;
+    margin: 10px 2px;
+}
+
+.btn-primary:not(.btn-link):not(.btn-flat) {
+    color: white;
+    background: #46c1d2;
+    text-transform: none;
+    padding: 8px 16px;
+    margin: 10px 2px;
+}
+
+.btn-blue:not(.btn-link):not(.btn-flat) {
+    color: white;
+    background-color: #46c1d2;
+    padding: 8px 16px;
+    margin: 10px 2px;
+}
+
+.btn-green:not(.btn-link):not(.btn-flat) {
+    color: white;
+    background-color: #82caa2;
+    padding: 8px 16px;
+    margin: 10px 2px;
+}
+
+/* end style buttons*/
+
+.modal-header .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.modal-header :after {
+    clear: both;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+}
+
+.errors {
+    font-size: 14px;
+    font-weight: 300;
+    color: #e0742b;
+    padding-top: 5px;
+}
+
+.placeholder-error {
+    font-size: 14px;
+    font-weight: 300;
+    color: #e0742b;
+}
+
+.field-error input,
+.field-error textarea {
+    border: 2px solid #e0742b;
+    box-shadow: 0 0 5px rgba(224, 116, 43, 0.75);
+}
+
+.round-picture-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.round-picture-medium {
+    border-radius: 34px/34px;
+    max-width: 68px;
+    height: 68px;
+}
+
+input[type=radio].ohm-radio,
+input[type=checkbox].ohm-checkbox {
+    display: none;
+}
+
+input[type=radio].ohm-radio + label.ohm-radio-label,
+input[type=checkbox].ohm-checkbox + label.ohm-checkbox-label {
+    padding-left: 25px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=radio].ohm-radio:checked + label.ohm-radio-label,
+input[type=checkbox].ohm-checkbox:checked + label.ohm-checkbox-label {
+    background-position: 0 -20px;
+}
+
+label.ohm-radio-label,
+label.ohm-checkbox-label {
+    background-image: url(/images/ohm/radio_buttons.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+label.ohm-checkbox-label {
+    background-image: url(/images/checkbox.png);
+}
+
+/* {# MD Jul-2015 These are to make the Material checkboxes have the same sizing and position as appears in Webflow and
+ use our blue color #} */
+.w-checkbox.w-clearfix {
+    margin-bottom: 0;
+    margin-left: -5px;
+    padding-left : 0;
+}
+
+.checkbox {
+    margin: 0;
+}
+
+.checkbox input[type=checkbox]:checked~.check, .checkbox-default input[type=checkbox]:checked~.check,
+.checkbox input[type=checkbox]:checked~.check:before, .checkbox-default input[type=checkbox]:checked~.check:before{
+    color: #47c1d2;
+}
+
+.checkbox input[type=checkbox]:checked~.check:after, .checkbox-default input[type=checkbox]:checked~.check:after {
+    background-color: #47c1d2;
+}
+
+/* {# End Material checkbox #} */
+
+.hide-div {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* MD Nov-2014 Override bootstrap.css where necessary */
+label {
+    font-weight: 300;
+}
+
+.container .well,
+body .well {
+    border-radius: 10px;
+}
+
+.container .well,
+.container .well .form-control,
+.container .well:not([class^="well well-material-"]),
+.container .well:not([class^="well well-material-"]) .form-control,
+.container-fluid .well,
+.container-fluid .well .form-control,
+.container-fluid .well:not([class^="well well-material-"]),
+.container-fluid .well:not([class^="well well-material-"])
+.form-control,
+body .well,
+body .well .form-control,
+body .well:not([class^="well well-material-"]),
+body .well:not([class^="well well-material-"])
+.form-control {
+    color: #808284;
+    border-bottom-color: #d1d2d4;
+}
+
+body .well .form-control::-webkit-input-placeholder,
+.container .well .form-control::-webkit-input-placeholder,
+.container-fluid .well .form-control::-webkit-input-placeholder,
+body .well:not([class^="well well-material-"]) .form-control::-webkit-input-placeholder,
+.container .well:not([class^="well well-material-"]) .form-control::-webkit-input-placeholder,
+.container-fluid .well:not([class^="well well-material-"]) .form-control::-webkit-input-placeholder {
+    color: #d1d2d4;
+}
+
+body .well .form-control::-moz-placeholder,
+.container .well .form-control::-moz-placeholder,
+.container-fluid .well .form-control::-moz-placeholder,
+body .well:not([class^="well well-material-"]) .form-control::-moz-placeholder,
+.container .well:not([class^="well well-material-"]) .form-control::-moz-placeholder,
+.container-fluid .well:not([class^="well well-material-"]) .form-control::-moz-placeholder {
+    color: #d1d2d4;
+    opacity: 1;
+}
+
+body .well .form-control:-ms-input-placeholder,
+.container .well .form-control:-ms-input-placeholder,
+.container-fluid .well .form-control:-ms-input-placeholder,
+body .well:not([class^="well well-material-"]) .form-control:-ms-input-placeholder,
+.container .well:not([class^="well well-material-"]) .form-control:-ms-input-placeholder,
+.container-fluid .well:not([class^="well well-material-"]) .form-control:-ms-input-placeholder {
+    color: #d1d2d4;
+}
+
+/* MD Nov-2014 Reverse the normal Material effect so when button is hovered it raises to level 2 and then when
+clicked goes to level 1. In other words, it is depressed a little when clicked */
+.btn:hover:not(.btn-link):not(.btn-flat) {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn:active:not(.btn-link):not(.btn-flat) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.28);
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu > li > a,
+.dropdown-menu > li > a:hover {
+    padding: 0;
+    vertical-align: inherit;
+    font-size: 24px;
+    font-weight: 300;
+    color: #bbbdc0;
+}
+
+.dropdown-menu > li > a:hover {
+    color: #46c1d2;
+}
+
+.dropdown-menu-item {
+    height: 65px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.dropdown-menu-underline {
+    border-bottom: 1px solid #e6e7e8;
+}
+
+.dropdown-menu-icon {
+    display: table-cell;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dropdown-menu-text {
+    display: table-cell;
+    height: 60px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.dropdown-menu-text-no-icon {
+    padding-left: 10px;
+}
+
+.ohm-tabs {
+    padding: 10px;
+    padding-bottom: 0;
+    background: #d1d2d4;
+}
+
+.ohm-tabs .nav-tabs {
+    background: #d1d2d4;
+}
+
+.ohm-tabs > .nav-tabs > li > a {
+    font-size: 24px;
+    color: #e6e7e8 !important;
+    padding: 23px;
+}
+
+.ohm-tabs > .nav-tabs > li.active > a {
+    color: white !important;
+}
+
+.ohm-tab.active {
+    border-bottom: 3px solid #45c1d2;
+}
+
+.ohm-widget-title {
+    color: #808284;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.ohm-list-masked {
+    position: relative;
+}
+
+.ohm-list-scroll-area {
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.ohm-list-mask-top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 40px;
+    width: 95%;
+    pointer-events: none;
+    z-index: 50;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0); /* IE6-9 */
+}
+
+.ohm-list-mask-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 44px;
+    width: 95%;
+    pointer-events: none;
+    z-index: 50;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* W3C */
+}
+
+.tooltip-inner {
+    background: white;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    color: #6D6E70;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 6px 0px, rgba(0, 0, 0, 0.227451) 0px 3px 6px 0px;
+    max-width: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.tooltip.top .arrow:after, .tooltip.top .tooltip-arrow {
+    border-top-color: white;
+}
+
+
+.ohm-loading {
+    background-image: url(/images/ohm/ohm-preloader.gif);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+#snackbar-container { line-height: 1.5em; }
+
+.item-new {
+    position: absolute;
+    width: 36px;
+    height: 15px;
+    top: 5px;
+    right: 0;
+    line-height: 15px;
+    font-size: 10px;
+    color: #EEEEEE;
+    text-align: center;
+    background-color: #FF6D00;
+    border-radius: 15px;
+}
+
+.tier-ball {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 2px;
+    margin-right: auto;
+    margin-left: 2px;
+    border: 1px solid #f0ca00;
+    border-radius: 100px;
+    background-color: gold;
+    color: #e5e4e2;
+    position: relative;
+    overflow: hidden;
+}
+    .tier-ball.gold { background-color: gold; }
+
+    .tier-ball.carbon { border-color: #f1f1f1; background-color: #2c2c2c; }
+        .tier-ball.carbon .tier-title { text-shadow: 0 -1px 0 #9c9c9c; }
+
+    .tier-ball.silver { border-color: #c2c2c2; background-color: #a2a2a2; }
+        .tier-ball.silver .tier-title { text-shadow: 0 -1px 0 #9c9c9c; }
+
+    .tier-ball.bronze { border-color: #c4772c; background-color: #cd7f32;}
+        .tier-ball.bronze .tier-title { text-shadow: 0 -1px 0 #965a1f }
+
+    .tier-ball.platinum { border-color: #ebebeb; background-color: #e5e4e2; }
+        .tier-ball.platinum .tier-title { text-shadow: 0 -1px 0 #b6b6b6; font-size: 19px; }
+
+    .tier-ball:after {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -20%;
+      width: 20%;
+      height: 200%;
+      opacity: 0;
+      transform: rotate(30deg);
+
+      background: rgba(255, 255, 255, 0.13);
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0.0) 100%
+      );
+    }
+
+    /* Hover state - trigger effect */
+    .tier-ball:hover:after {
+      opacity: 1;
+      top: 100%;
+      left: 100%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+    }
+
+    /* Active state */
+    .tier-ball:active:after {
+      opacity: 0;
+    }
