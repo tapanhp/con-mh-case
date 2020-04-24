@@ -1,0 +1,141 @@
+{% extends "base_map.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/css/webflow_base.css">
+
+    <style>
+        html, body {
+            background-color: #f1f1f2;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        body, p, h1, h2, h3, h4, h5, h6 {
+            font-family: "Open Sans", sans-serif;
+            color: #808284;
+        }
+
+        .container {
+            font-family: "Open Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: #808284;
+            padding-top: 50px;
+            background: #f1f1f2;
+            padding-bottom: 50px;
+        }
+
+        #dashboard-top-spacer {
+            height: 25px;
+        }
+
+        #referrals .leaderboard_points {
+            margin-top: 5px;
+        }
+
+        .well { height: 380px; overflow: hidden; }
+
+        .dashboard-tip-spot {
+            position: absolute;
+            z-index: 50;
+            bottom: 30px;
+            right: 20px;
+            height: 26px;
+            width: 26px;
+            margin-top: 0px;
+            padding-top: 3px;
+            border-radius: 13px;
+            text-align: center;
+            background-color: #E6E7E8;
+            color: #A7A9AB;
+        }
+
+        @media (max-width: 768px) {
+          .dashboard-tip-spot { bottom: 10px; }
+        }
+
+        .dashboard-tip-spot-content {
+            display: none;
+        }
+
+        .warning-button {
+            display: block;
+            margin-top: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px solid #47bccc;
+            border-radius: 5px;
+            background-color: #47c1d2;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+        }
+
+    </style>
+<script>
+ function myFunction() {
+  const previousRow = {};
+  const colsChanged = {};
+  let leftMerged = false;
+  let dark = false;
+
+  Array.from(document.querySelectorAll('tbody tr')).forEach((tr, rowIdx) => {
+    Array.from(tr.children).forEach((td, colIdx) => {
+      if (rowIdx > 0 && (colIdx === 0 || leftMerged) && previousRow[colIdx].text === td.innerText) {
+        previousRow[colIdx].elem.setAttribute('rowspan', ++previousRow[colIdx].span);
+        colsChanged[colIdx] = false;
+        td.remove();
+        if (colIdx === 0) {
+          leftMerged = true;
+        }
+      } else {
+        previousRow[colIdx] = { span: 1, text: td.innerText, elem: td, dark };
+        colsChanged[colIdx] = true;
+      }
+    });
+    const rowChanged = Object.values(colsChanged).every(Boolean);
+    dark = rowChanged && rowIdx > 0 ? !dark : dark;
+    if (dark) {
+      tr.classList.add('dark');
+    }
+    leftMerged = false;
+  });
+}
+</script>
+
+{% endblock %}
+
+{% block body %}
+<body onload="myFunction()">
+    <div id="container" class="container">
+        <div id="dashboard-top-spacer">&nbsp;</div>
+
+        </div>
+            <div class="container">
+                <h3>Recent Signed Users</h3>
+                <table class="table table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Name</th>
+                    <th>Tier</th>
+                    <th>Point Balance</th>
+                    <th>Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for data in users %}
+                    <tr>
+                            <td>{{ data['display_name'] }}</td>
+                            <td>{{ data['tier'] }}</td>
+                            <td>{{ data['point_balance'] }}</td>
+                            <td>{{ data['phone'] if data['phone'] != None else 'Not Available' }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                </table>
+</div>
+
+    </div>
+</body>
+{% endblock %}
