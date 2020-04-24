@@ -71,38 +71,43 @@
             font-size: 14px;
             text-align: center;
         }
-
-    </style>
-<script>
- function myFunction() {
-  const previousRow = {};
-  const colsChanged = {};
-  let leftMerged = false;
-  let dark = false;
-
-  Array.from(document.querySelectorAll('tbody tr')).forEach((tr, rowIdx) => {
-    Array.from(tr.children).forEach((td, colIdx) => {
-      if (rowIdx > 0 && (colIdx === 0 || leftMerged) && previousRow[colIdx].text === td.innerText) {
-        previousRow[colIdx].elem.setAttribute('rowspan', ++previousRow[colIdx].span);
-        colsChanged[colIdx] = false;
-        td.remove();
-        if (colIdx === 0) {
-          leftMerged = true;
+        .dark {
+            background-color: #dddddd;
         }
-      } else {
-        previousRow[colIdx] = { span: 1, text: td.innerText, elem: td, dark };
-        colsChanged[colIdx] = true;
-      }
+        .table-bordered td, .table-bordered th{
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+    function myFunction() {
+    const previousRow = {};
+    const colsChanged = {};
+    let leftMerged = false;
+    let dark = false;
+
+    Array.from(document.querySelectorAll('tbody tr')).forEach((tr, rowIdx) => {
+        Array.from(tr.children).forEach((td, colIdx) => {
+        if (rowIdx > 0 && (colIdx === 0 || leftMerged) && previousRow[colIdx].text === td.innerText) {
+            previousRow[colIdx].elem.setAttribute('rowspan', ++previousRow[colIdx].span);
+            colsChanged[colIdx] = false;
+            td.remove();
+            if (colIdx === 0) {
+            leftMerged = true;
+            }
+        } else {
+            previousRow[colIdx] = { span: 1, text: td.innerText, elem: td, dark };
+            colsChanged[colIdx] = true;
+        }
+        });
+        const rowChanged = Object.values(colsChanged).every(Boolean);
+        dark = rowChanged && rowIdx > 0 ? !dark : dark;
+        if (dark) {
+        tr.classList.add('dark');
+        }
+        leftMerged = false;
     });
-    const rowChanged = Object.values(colsChanged).every(Boolean);
-    dark = rowChanged && rowIdx > 0 ? !dark : dark;
-    if (dark) {
-      tr.classList.add('dark');
     }
-    leftMerged = false;
-  });
-}
-</script>
+    </script>
 
 {% endblock %}
 
@@ -114,7 +119,7 @@
         </div>
             <div class="container">
                 <h3>Recent Signed Users</h3>
-                <table class="table table-striped table-hover table-bordered">
+                <table class="table table-bordered">
                 <thead class="thead-dark">
                   <tr>
                     <th>Name</th>
