@@ -172,7 +172,7 @@
     <div id="header-dropdown-block">
         <div id="header-dropdown" class="header-right-item dropdown-toggle" data-toggle="dropdown">
             <div id="header-name" class="display_short_name js-short-name">
-                {{ current_user.short_name() }}
+                {{ current_user.email_address }}
             </div>
             <div id="header-dropdown-icon-block">
                 <img id="header-dropdown-icon" src="/images/dropdown_triangle.png"/>
@@ -194,7 +194,7 @@
     </div>
 
        <div id="header-tier" class="header-right-item">
-           <span class="header-status-level-1">Status</span><span class="header-status-level-2"> Level: </span><span class="tier-ball {{ current_user.get_tier().lower() }}"></span>
+           <span class="header-status-level-1">Points</span><span class="header-status-level-2"> {{ current_user.point_balance }}</span>
     </div>
 
 </div>
