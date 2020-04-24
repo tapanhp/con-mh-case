@@ -46,7 +46,7 @@ def upgrade():
                 (2, 'LOCATION', 'USA')
         ''')
 
-    op.execute('''update user set tier="silver" 
+    op.execute('''update user set tier="Silver" 
     where username="tester3"
     ''')
 
